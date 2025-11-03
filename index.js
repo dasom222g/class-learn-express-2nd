@@ -1,8 +1,12 @@
 const express = require("express"); // express가져오기
+const dotenv = require("dotenv");
+
 const app = express();
 
+// 환경변수 로드
+dotenv.config()
 
 // 서버 실행
 app.listen(8080, () => {
-  console.log("Server running")
+  console.log("Server running", process.env.PORT)
 })
